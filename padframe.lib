@@ -1,0 +1,10 @@
+# --------------------------------------------------------------
+# Author: Matthew Lewandowski
+# Course: CIS4930 - VLSI Design Automation
+# --------------------------------------------------------------
+# USF AMI05 CMOS-VLSI Design Padframe Description
+# -------------------------------------------------------------- 
+# Constraints		W	L
+# -------------------------------------------------------------- 
+.USABLE		800	800	# Hard Value Cannot Exceed this Value (Maximum Usable Area Across All Slices)
+.SLICES	 	8	8	# 100 x 100 (Slice Grid)

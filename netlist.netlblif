@@ -1,0 +1,16 @@
+# --------------------------------------------------------------
+# Author: Matthew Lewandowski
+# Course: CIS4930 - VLSI Design Automation
+# --------------------------------------------------------------
+# Sample Netlist of Full Adder
+# -------------------------------------------------------------- 
+.model EX_27
+.inputs P Q R			# Inputs to the structure
+.outputs S			# Output of the structure
+.gate and3 a=P b=Q c=R O=T1
+.gate inv  a=T1 O=T2
+.gate inv  a=T2 O=T3
+.gate xor2 a=P b=T3 O=T4
+.gate xor2 a=R b=T4 O=T5
+.gate inv  a=T5 O=S
+.end

@@ -1,0 +1,68 @@
+# --------------------------------------------------------------
+# Author: Matthew Lewandowski
+# Course: CIS4930 - VLSI Design Automation
+# --------------------------------------------------------------
+# USF AMI05 CMOS-VLSI Design STD Cell Library Description
+# -------------------------------------------------------------- 
+# Notes:
+#	(W) is Up/Down
+#	(L) is Left/Right
+#	(W)/(L) are presented in units of Lambda
+#	Lambda = 0.3 micron
+#	Pins format is PinName.Direction
+#	Directions:
+#		I: IN
+#		O: Out
+# --------------------------------------------------------------
+#      Name	W	L	Pins
+# --------------------------------------------------------------
+# Inverters (INV) & Buffers (BUF)
+.cell	inv	30	7.2	a.I O.O
+.cell	buf	30	12	a.I O.O
+
+# ANDs (AND#)
+.cell	and1	30	16.8	a.I O.O
+.cell	and2	30	16.8	a.I b.I O.O
+.cell	and3	30	19.2	a.I b.I c.I o.O
+.cell	and4	30	21.6	a.I b.I c.I d.I O.O
+
+# ORs (OR#)
+.cell	or1	30	15.9	a.I O.O
+.cell	or2	30	15.9	a.I b.I O.O
+.cell	or3	30	19.2	a.I b.I c.I O.O
+.cell	or4	30	21.6	a.I b.I c.I d.I O.O
+
+# NANDs (NAND#)
+.cell	nand1	30	9.6	a.I b.I O.O
+.cell	nand2	30	9.6	a.I b.I O.O
+.cell	nand3	30	12	a.I b.I c.I O.O
+.cell	nand4	30	14.4	a.I b.I c.I d.I O.O
+
+# NORs (NOR#)
+.cell	nor1	30	8.7	a.I O.O
+.cell	nor2	30	8.7	a.I b.I O.O
+.cell	nor3	30	12	a.I b.I c.I O.O
+.cell	nor4	30	14.4	a.I b.I c.I d.I O.O
+
+# And-Or-Inverts (AOI-##)
+.cell	aoi21	30	12	a.I b.I c.I O.O
+.cell	aoi22	30	14.4	a.I b.I c.I d.I O.O
+.cell	aoi33	30	19.2	a.I b.I c.I d.I e.I f.I O.O
+
+# Multiplexers (MUX#)
+.cell	mux2	30	28.8	a.I b.I s.I O.O
+
+# XORs (XOR#) & XNORs (XNOR#)
+.cell	xor2 	30	31.2	a.I b.I O.O
+.cell	xnor2	30	38.4	a.I b.I O.O
+
+# Full Adders (FA)
+.cell	fa	30	67.2	a.I b.I ci.I s.O co.O
+
+# Comparators (MC)
+.cell	mc	30	25.2	a.I b.I altb.O agtb.O
+
+# Flip-Flops (#FF)
+.cell	dff	30	72	set.I rst.I clk.I d.I q.O qb.O
+.cell	jkff	30	88.8	set.I rst.I clk.I j.I k.I q.O qb.O
+.cell	tff	30	88.8	set.I rst.I clk.I t.I q.O qb.O
